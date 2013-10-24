@@ -54,12 +54,6 @@
     margin-right: auto ;
     width: 90%;
     position: relative;
-
-        -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-          transition: all 0.5s ease;
 }
 .setContainer.goLeft  {
 	left:-100%;
@@ -69,17 +63,9 @@
        -o-transition: all 0.5s ease;
       -ms-transition: all 0.5s ease;
           transition: all 0.5s ease;
-}
-.fullSize {
-position: relative;
-left: 100%;
-}
-.fullSize.goLeft  {
-	left:0;
 
-    -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-          transition: all 0.5s ease;
+}
+#fullSize {
+
+	display: none;
 }
