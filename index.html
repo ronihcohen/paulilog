@@ -5,7 +5,7 @@
 	<script>
 	$(document).ready(function(){
 
-			setTimeout(function(){alert("Hello")},3000);
+
 		$('div.imgContainer').mouseover(function() {
 			$(this).find('div.imgTitle').toggle();
 			$(this).css('z-index','1');
@@ -20,16 +20,12 @@
 
 		$('.imgFile > img').click(function() {
 			$('div.setContainer').toggleClass('goLeft');
-			$('div.setContainer').fadeOut(500);
-
+			$('div.setContainer').fadeOut(300);
 
 			var tumbSrc = $(this).attr("src").split("/");
 			var fullSrc = "pictures/" + tumbSrc[2];
 			$('#fullSize').attr("src",fullSrc );
-
-
-
-			$('#fullSize').delay(500).fadeIn(500);
+			$('#fullSize').delay(300).fadeIn(300);
 		
 		});
 
@@ -248,8 +244,9 @@
 			</div> 
 		</div> 
 	</div>
-
-	<img src="" id="fullSize">
+	<div class="fullsize">
+		<img src="" id="fullSize">
+	</div>
 
 </body>
 </html>
