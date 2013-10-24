@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-1.10.2.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('div.imgContainer').mouseover(function() {
+		$(this).find('div.imgTitle').toggle();
+		$(this).css('z-index','1');
+	});
+
+	$('div.imgContainer').mouseout(function() {
+		$(this).find('div.imgTitle').toggle();
+		$(this).css('z-index','-1');
+	});
+
+
+
+	$('.imgFile > img').click(function() {
+		$('div.setContainer').toggleClass('goLeft')
+		$('#fullSize').toggleClass('goLeft')
+		var tumbSrc = $(this).attr("src").split("/");
+		var fullSrc = "pictures/" + tumbSrc[2];
+		$('#fullSize').attr("src",fullSrc );
+	});
+
+
+});
+</script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+ <span>paulilog@instangram</span>
+ <img src="" id="fullSize">
+
+<div class="setContainer">
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 10.JPG </p> 
+</div> 
+<img src="pictures/tumb/10.JPG">
+</div> 
+</div> 
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 11.JPG </p> 
+</div> 
+<div class="imgFile"> 
+<img src="pictures/tumb/11.JPG">
+</div> 
+</div> 
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 12.JPG </p> 
+</div> 
+<div class="imgFile"> 
+<img src="pictures/tumb/12.JPG">
+</div> 
+</div> 
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 13.JPG </p> 
+</div> 
+<div class="imgFile"> 
+<img src="pictures/tumb/13.JPG">
+</div> 
+</div> 
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 14.JPG </p> 
+</div> 
+<div class="imgFile"> 
+<img src="pictures/tumb/14.JPG">
+</div> 
+</div> 
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 15.JPG </p> 
+</div> 
+<div class="imgFile"> 
+<img src="pictures/tumb/15.JPG">
+</div> 
+</div> 
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 16.JPG </p> 
+</div> 
+<div class="imgFile"> 
+<img src="pictures/tumb/16.JPG">
+</div> 
+</div> 
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 17.JPG </p> 
+</div> 
+<div class="imgFile"> 
+<img src="pictures/tumb/17.JPG">
+</div> 
+</div> 
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 18.JPG </p> 
+</div> 
+<div class="imgFile"> 
+<img src="pictures/tumb/18.JPG">
+</div> 
+</div> 
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 19.JPG </p> 
+</div> 
+<div class="imgFile"> 
+<img src="pictures/tumb/19.JPG">
+</div> 
+</div> 
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 1.JPG </p> 
+</div> 
+<div class="imgFile"> 
+<img src="pictures/tumb/1.JPG">
+</div> 
+</div> 
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 20.JPG </p> 
+</div> 
+<div class="imgFile"> 
+<img src="pictures/tumb/20.JPG">
+</div> 
+</div> 
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 21.JPG </p> 
+</div> 
+<div class="imgFile"> 
+<img src="pictures/tumb/21.JPG">
+</div> 
+</div> 
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 22.JPG </p> 
+</div> 
+<div class="imgFile"> 
+<img src="pictures/tumb/22.JPG">
+</div> 
+</div> 
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 23.JPG </p> 
+</div> 
+<div class="imgFile"> 
+<img src="pictures/tumb/23.JPG">
+</div> 
+</div> 
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 24.JPG </p> 
+</div> 
+<div class="imgFile"> 
+<img src="pictures/tumb/24.JPG">
+</div> 
+</div> 
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 25.JPG </p> 
+</div> 
+<div class="imgFile"> 
+<img src="pictures/tumb/25.JPG">
+</div> 
+</div> 
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 2.JPG </p> 
+</div> 
+<div class="imgFile"> 
+<img src="pictures/tumb/2.JPG">
+</div> 
+</div> 
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 3.JPG </p> 
+</div> 
+<div class="imgFile"> 
+<img src="pictures/tumb/3.JPG">
+</div> 
+</div> 
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 4.JPG </p> 
+</div> 
+<div class="imgFile"> 
+<img src="pictures/tumb/4.JPG">
+</div> 
+</div> 
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 5.JPG </p> 
+</div> 
+<div class="imgFile"> 
+<img src="pictures/tumb/5.JPG">
+</div> 
+</div> 
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 6.JPG </p> 
+</div> 
+<div class="imgFile"> 
+<img src="pictures/tumb/6.JPG">
+</div> 
+</div> 
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 7.JPG </p> 
+</div> 
+<div class="imgFile"> 
+<img src="pictures/tumb/7.JPG">
+</div> 
+</div> 
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 8.JPG </p> 
+</div> 
+<div class="imgFile"> 
+<img src="pictures/tumb/8.JPG">
+</div> 
+</div> 
+<div class="imgContainer">
+<div class="imgTitle">
+<p> Animals 9.JPG </p> 
+</div> 
+<div class="imgFile"> 
+<img src="pictures/tumb/9.JPG">
+</div> 
+</div> 
+</div>
+
+</body>
+</html>

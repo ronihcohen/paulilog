@@ -1,0 +1,85 @@
+.imgTitle {
+	display: none;
+	height: 240px;
+	width: 220px;
+	text-align: center;
+	padding-top: 2px;
+	box-shadow: 0px 0px 60px 1px rgba(100, 100, 100, 0.4);
+	background-color: white;
+	position: relative;
+	left: -9px;
+	top: -6px;
+}
+.imgTitle p {
+	margin-top: 213px;
+}
+.imgContainer 	{
+	position: relative;
+	float: left;
+	width: 200px;
+	background-color: white;
+	margin-left: 2px;
+	margin-top: 2px;
+	height: 200px;
+	z-index: -1;
+}
+.imgContainer img {
+  	height: 200px;
+ 	
+  	width: 200px;
+}
+/*.imgContainer img:hover {
+  height: 220px;
+  width: 220px;
+
+    -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}*/
+.imgFile {
+	position: absolute;
+    
+	top: 0;
+	left: 0;
+    display: block;
+	overflow: hidden;
+	height: 200px;
+ 	width: 200px;
+}
+.setContainer{
+	margin-top: 20px;
+	margin-left: auto ; 
+    margin-right: auto ;
+    width: 90%;
+    position: relative;
+
+        -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+.setContainer.goLeft  {
+	left:-100%;
+
+    -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+.fullSize {
+position: relative;
+left: 100%;
+}
+.fullSize.goLeft  {
+	left:0;
+
+    -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
