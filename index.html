@@ -16,17 +16,22 @@
 			$(this).css('z-index','-1');
 		});
 
-
-
 		$('.imgFile > img').click(function() {
-			$('div.setContainer').toggleClass('goLeft');
-			$('div.setContainer').fadeOut(300);
+			$('div.setContainer').animate({ "left": "-100%" },
+					function(){
+            			 $(this).hide(); 
+            		});
 
 			var tumbSrc = $(this).attr("src").split("/");
 			var fullSrc = "pictures/" + tumbSrc[2];
-			$('#fullSize').attr("src",fullSrc );
-			$('#fullSize').delay(300).fadeIn(300);
-		
+			$('#fullSize').attr("src",fullSrc ).delay(400).fadeIn(300);
+		});
+
+		$('#fullSize').click(function() {
+			$('#fullSize').fadeOut(300,function(){
+				$('div.setContainer').toggle().animate({ "left": "0" });	
+			});
+			
 		});
 
 
