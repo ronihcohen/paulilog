@@ -22,10 +22,8 @@
             			 $(this).hide(); 
             		});
 
-			var tumbSrc = $(this).find('img').attr("src").split("/");
-			var fullSrc = "pictures/" + tumbSrc[2];
-			$('#fullSize').attr("src",fullSrc );
-			
+			setFullImgSrc($(this).find('img'));
+
 			setTitle = $(this).find('p').text();
 			if ($('#'+ setTitle).length > 0) {
 				$('#'+ setTitle).show();
@@ -39,8 +37,22 @@
 			});
 
 			$('.smallSet').fadeOut(300);
-			
 		});
+
+		$('div.smallSet > img').click(function() {
+			setFullImgSrc($(this));
+		});
+
+		function setFullImgSrc(thisImg) { // jQuery Object of the Full Img 
+			var tumbSrc = thisImg.attr("src").split("/");
+			var fullSrc = "pictures/" + tumbSrc[2];
+			var image 	= $('#fullSize');
+
+				image.fadeOut('fast', function () {
+			        image.attr('src', fullSrc);
+			        image.fadeIn('fast');
+	  			});
+		}
 
 
 	});
@@ -199,7 +211,7 @@
 	</div>
 
 	<div class="fullSize">
-		<img src="" id="fullSize">
+		<img src="loading.png" id="fullSize">
 
 		<div id="Red"  class="smallSet" style="display: none;">
 			<img src="pictures/tumb/10.JPG">
