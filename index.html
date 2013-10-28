@@ -16,21 +16,29 @@
 			$(this).css('z-index','-1');
 		});
 
-		$('.imgFile > img').click(function() {
+		$('.imgContainer').click(function() {
 			$('div.setContainer').animate({ "left": "-100%" },
 					function(){
             			 $(this).hide(); 
             		});
 
-			var tumbSrc = $(this).attr("src").split("/");
+			var tumbSrc = $(this).find('img').attr("src").split("/");
 			var fullSrc = "pictures/" + tumbSrc[2];
-			$('#fullSize').attr("src",fullSrc ).delay(400).fadeIn(300);
+			$('#fullSize').attr("src",fullSrc );
+			
+			setTitle = $(this).find('p').text();
+			if ($('#'+ setTitle).length > 0) {
+				$('#'+ setTitle).show();
+			}
+			$('div.fullSize').delay(400).fadeIn(300);
 		});
 
 		$('#fullSize').click(function() {
-			$('#fullSize').fadeOut(300,function(){
+			$('div.fullSize').fadeOut(300,function(){
 				$('div.setContainer').toggle().animate({ "left": "0" });	
 			});
+
+			$('.smallSet').fadeOut(300);
 			
 		});
 
@@ -48,7 +56,7 @@
 
 		<div class="imgContainer">
 			<div class="imgTitle">
-				<p> Animals 10.JPG </p> 
+				<p>Red</p> 
 			</div> 
 			<div class="imgFile"> 
 				<img src="pictures/tumb/10.JPG">
@@ -57,12 +65,21 @@
 
 		<div class="imgContainer">
 			<div class="imgTitle">
-				<p> Animals 11.JPG </p> 
+				<p>Urban</p> 
 			</div> 
 			<div class="imgFile"> 
 				<img src="pictures/tumb/11.JPG">
 			</div> 
 		</div> 
+
+		<div class="imgContainer">
+			<div class="imgTitle">
+				<p>Animals</p> 
+			</div> 
+			<div class="imgFile"> 
+				<img src="pictures/tumb/8.JPG">
+			</div> 
+		</div>
 
 		<div class="imgContainer">
 			<div class="imgTitle">
@@ -72,14 +89,7 @@
 				<img src="pictures/tumb/12.JPG">
 			</div> 
 		</div> 
-		<div class="imgContainer">
-			<div class="imgTitle">
-				<p> Animals 13.JPG </p> 
-			</div> 
-			<div class="imgFile"> 
-				<img src="pictures/tumb/13.JPG">
-			</div> 
-		</div> 
+
 		<div class="imgContainer">
 			<div class="imgTitle">
 				<p> Animals 14.JPG </p> 
@@ -104,14 +114,7 @@
 				<img src="pictures/tumb/16.JPG">
 			</div> 
 		</div> 
-		<div class="imgContainer">
-			<div class="imgTitle">
-				<p> Animals 17.JPG </p> 
-			</div> 
-			<div class="imgFile"> 
-				<img src="pictures/tumb/17.JPG">
-			</div> 
-		</div> 
+ 
 		<div class="imgContainer">
 			<div class="imgTitle">
 				<p> Animals 18.JPG </p> 
@@ -144,46 +147,7 @@
 				<img src="pictures/tumb/20.JPG">
 			</div> 
 		</div> 
-		<div class="imgContainer">
-			<div class="imgTitle">
-				<p> Animals 21.JPG </p> 
-			</div> 
-			<div class="imgFile"> 
-				<img src="pictures/tumb/21.JPG">
-			</div> 
-		</div> 
-		<div class="imgContainer">
-			<div class="imgTitle">
-				<p> Animals 22.JPG </p> 
-			</div> 
-			<div class="imgFile"> 
-				<img src="pictures/tumb/22.JPG">
-			</div> 
-		</div> 
-		<div class="imgContainer">
-			<div class="imgTitle">
-				<p> Animals 23.JPG </p> 
-			</div> 
-			<div class="imgFile"> 
-				<img src="pictures/tumb/23.JPG">
-			</div> 
-		</div> 
-		<div class="imgContainer">
-			<div class="imgTitle">
-				<p> Animals 24.JPG </p> 
-			</div> 
-			<div class="imgFile"> 
-				<img src="pictures/tumb/24.JPG">
-			</div> 
-		</div> 
-		<div class="imgContainer">
-			<div class="imgTitle">
-				<p> Animals 25.JPG </p> 
-			</div> 
-			<div class="imgFile"> 
-				<img src="pictures/tumb/25.JPG">
-			</div> 
-		</div> 
+ 
 		<div class="imgContainer">
 			<div class="imgTitle">
 				<p> Animals 2.JPG </p> 
@@ -215,15 +179,7 @@
 			<div class="imgFile"> 
 				<img src="pictures/tumb/5.JPG">
 			</div> 
-		</div> 
-		<div class="imgContainer">
-			<div class="imgTitle">
-				<p> Animals 6.JPG </p> 
-			</div> 
-			<div class="imgFile"> 
-				<img src="pictures/tumb/6.JPG">
-			</div> 
-		</div> 
+		</div>  
 		<div class="imgContainer">
 			<div class="imgTitle">
 				<p> Animals 7.JPG </p> 
@@ -231,15 +187,7 @@
 			<div class="imgFile"> 
 				<img src="pictures/tumb/7.JPG">
 			</div> 
-		</div> 
-		<div class="imgContainer">
-			<div class="imgTitle">
-				<p> Animals 8.JPG </p> 
-			</div> 
-			<div class="imgFile"> 
-				<img src="pictures/tumb/8.JPG">
-			</div> 
-		</div> 
+		</div>  
 		<div class="imgContainer">
 			<div class="imgTitle">
 				<p> Animals 9.JPG </p> 
@@ -249,9 +197,31 @@
 			</div> 
 		</div> 
 	</div>
-	<div class="fullsize">
+
+	<div class="fullSize">
 		<img src="" id="fullSize">
+
+		<div id="Red"  class="smallSet" style="display: none;">
+			<img src="pictures/tumb/10.JPG">
+			<img src="pictures/tumb/21.JPG">
+			<img src="pictures/tumb/22.JPG">
+			<img src="pictures/tumb/23.JPG">
+		</div>
+
+		<div id="Urban"  class="smallSet" style="display: none;">
+			<img src="pictures/tumb/17.JPG">
+			<img src="pictures/tumb/24.JPG">
+			<img src="pictures/tumb/6.JPG">
+		</div>
+
+		<div id="Animals"  class="smallSet" style="display: none;">
+			<img src="pictures/tumb/25.JPG">
+			<img src="pictures/tumb/13.JPG">
+		</div>
+
 	</div>
+
+
 
 </body>
 </html>
