@@ -48,10 +48,14 @@
 			var fullSrc = "pictures/" + tumbSrc[2];
 			var image 	= $('#fullSize');
 
-				image.fadeOut('fast', function () {
-			        image.attr('src', fullSrc);
-			        image.fadeIn('fast');
-	  			});
+			image.fadeOut('fast', function () {
+				image.attr('src', fullSrc);
+				image.one('load', function() {
+					image.fadeIn('fast');
+				}).each(function() {
+					if(this.complete) $(this).load();
+				});
+			});
 		}
 
 
@@ -211,8 +215,10 @@
 	</div>
 
 	<div class="fullSize">
-		<img src="loading.png" id="fullSize">
 
+		<div  class="fullImgContainer">
+			<img src="" id="fullSize">
+		</div>
 		<div id="Red"  class="smallSet" style="display: none;">
 			<img src="pictures/tumb/10.JPG">
 			<img src="pictures/tumb/21.JPG">

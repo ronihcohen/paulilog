@@ -68,3 +68,12 @@ div.fullSize {
     margin-right: auto ;
     margin-top: 20px;
 }
+
+div.fullImgContainer {
+	background-image:url('loading.gif');
+	height: 612px;
+	width: 612px;
+	background-repeat:no-repeat;
+	background-position:center;
+	margin-bottom: 10px;
+}
